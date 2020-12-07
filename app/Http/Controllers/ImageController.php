@@ -28,16 +28,16 @@ class ImageController extends ApiController
         ]);
 
         // if validate fails abort with 400
-        if ($validator->fails()) {
-            return response()
-                ->json([
-                    'code'      => 400,
-                    'success'   => false,
-                    'errors'    => [
-                        'File type is invalid'
-                    ]
-                ]);
-        }
+//        if ($validator->fails()) {
+//            return response()
+//                ->json([
+//                    'code'      => 400,
+//                    'success'   => false,
+//                    'errors'    => [
+//                        'File type is invalid'
+//                    ]
+//                ]);
+//        }
 
         try {
             // get the file
@@ -96,7 +96,7 @@ class ImageController extends ApiController
                 'code'      => 500,
                 'success'   => false,
                 'errors'    => [
-                    'Failed to save image'
+                    $e.'Failed to save image'
                 ]
             ]);
         }

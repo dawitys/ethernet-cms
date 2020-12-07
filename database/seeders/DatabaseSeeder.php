@@ -1,10 +1,10 @@
 <?php
 
-use App\Post;
-use App\Footer;
-use App\Image;
-use App\Page;
-use App\User;
+use App\Models\Post;
+use App\Models\Footer;
+use App\Models\Image;
+use App\Models\Page;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
 
         $user->save();
 
-        
+
         $user = new User;
 
         $user->username = 'admin2';

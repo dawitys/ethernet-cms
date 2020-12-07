@@ -45,7 +45,7 @@ class SaveImage
             copy($folder_path_130 . '/' . $this->file_name, $folder_path_original . '/' . $this->file_name);
             return;
         }
-        $image = Image::make($this->media->getRealPath());
+        $image = Image::make($this->image->getRealPath());
         $image->save($folder_path_original . '/' . $this->file_name, 70);
         $image->fit(130, 130);
         $image->save($folder_path_130 . '/' . $this->file_name, 70);
